@@ -9,7 +9,7 @@ This means, takes "data" whose type is pandas.DataFrame as input and returns a p
 
 To make it easy for you to get along with, you should follow this pipeline built by Gia Bảo. 
 
-![Preprocessing Pipeline](../pipe.png)
+![Preprocessing Pipeline](../.img/pipe.png)
 
 ---
 
@@ -44,7 +44,7 @@ def preprocess(data: pandas.DataFrame) -> pandas.DataFrame:
 
 Here, "# Read data" or "# Text cleaning" or "# Normalisation" are the smaller steps of the function. You can code these steps outside the functions and test them, when testing phase is done you can put it into the functions, like this, I code the step "Read Data" and test it, after ensuring that it performs well, I put it into the function.
 
-![Preprocessing Pipeline](../illustration.png)
+![Preprocessing Pipeline](../.img/illustration.png)
 
 Remember, after all the elements of the function is filled, you will have to test the function as a whole. 
 
@@ -54,4 +54,4 @@ Hope with this instruction can help you to learn and code.
 
 - Feel free to ask the leader if you get into any problems.
 - The pipeline depicted in the picture belongs to Gia Bảo, it is his work of effort, __DO NOT__ share without his permission.
-
+- Do not put all the works until the final day of deadline, it is too dangerous as the preprocessing is one of the most important stage. 
