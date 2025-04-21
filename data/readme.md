@@ -50,7 +50,7 @@ At illustrated in the image above, I code the step "Read Data" and test it, afte
 
 For further visualisation, the output should look like this, where column consists of words, row consists of documents and the entries are tf-idf values. 
 
-![Preprocessing Pipeline](../.img/tfidf_illustration.jpg)
+![Output example](../.img/tfidf_illustration.jpg)
 
 Remember, after all the elements of the function is filled, you will have to test the function as a whole. 
 
