@@ -42,9 +42,15 @@ def preprocess(data: pandas.DataFrame) -> pandas.DataFrame:
     # Word Embeddings (turns into vector)
 ``` 
 
-Here, "# Read data" or "# Text cleaning" or "# Normalisation" are the smaller steps of the function. You can code these steps outside the functions and test them, when testing phase is done you can put it into the functions, like this, I code the step "Read Data" and test it, after ensuring that it performs well, I put it into the function.
+Here, "# Read data" or "# Text cleaning" or "# Normalisation" are the smaller steps of the function. You can code these steps outside the functions and test them, when testing phase is done you can put it into the function. 
 
 ![Preprocessing Pipeline](../.img/illustration.png)
+
+At illustrated in the image above, I code the step "Read Data" and test it, after ensuring that it performs well by printing the result, I put it into the function.
+
+For further visualisation, the output should look like this, where column consists of words, row consists of documents and the entries are tf-idf values. 
+
+![Preprocessing Pipeline](../.img/tfidf_illustration.jpg)
 
 Remember, after all the elements of the function is filled, you will have to test the function as a whole. 
 
