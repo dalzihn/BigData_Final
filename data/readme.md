@@ -21,12 +21,12 @@ To complete this task, follow the steps in the above picture. For example,
 
 ```
 def preprocess(data: pandas.DataFrame) -> pandas.DataFrame:
-    """Performs the preprocessing
+    """Performs the preprocessing step
     
     Args:
         data: input file as pandas.DataFrame
     Returns:
-        A pandas.DataFrame which as vector form of the input
+        A pandas.DataFrame which is vector form of the input
     """
 
     # Read data
