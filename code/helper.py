@@ -62,11 +62,9 @@ def preprocess(data: pd.DataFrame) -> pd.DataFrame:
     Returns:
         A pandas.DataFrame which as vector form of the input
     """
-    stop_words = set(stopwords.words('english'))
-    
-    # Read data
-    data = pd.read_json(os.path.join("..", "data", "test.json"))
-    lemmatizer = WordNetLemmatizer()
+    stop_words = stopwords.words('english')
+    lemmatiser = WordNetLemmatizer()
+
     #Sentence tokenisation
     data['sent_tokens'] = data['text'].apply(sent_tokenize)
     
@@ -80,13 +78,13 @@ def preprocess(data: pd.DataFrame) -> pd.DataFrame:
     data['word_tokens'] = data['sent_tokens'].apply(custom_word_tokenize)
 
     # # Stemming
-    data['word_tokens'] = data['word_tokens'].apply(lambda word_tokens: [lemmatizer.lemmatize(word) for word in word_tokens])
+    data['word_tokens'] = data['word_tokens'].apply(lambda word_tokens: [lemmatiser.lemmatize(word) for word in word_tokens])
 
     # Word Embeddings (turns into vector)
     data['to_tfidf'] = data['word_tokens'].apply(lambda tokens: ' '.join(tokens))
-    vectorizer = TfidfVectorizer(min_df=0.3, max_df=0.85)
+    vectorizer = TfidfVectorizer(min_df=0.3, max_df=0.85, stop_words=stop_words)
     tfidf_matrix = vectorizer.fit_transform(data['to_tfidf'])
     
-    # # Convert to DataFrame
+    # Convert to DataFrame
     tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
     return data, tfidf
