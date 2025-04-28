@@ -61,8 +61,18 @@ Hope with this instruction can help you to learn and code.
 - The pipeline depicted in the picture belongs to Gia Bảo, it is his work of effort, __DO NOT__ share without his permission.
 - Do not put all the works until the final day of deadline, it is too dangerous as the preprocessing is one of the most important stage. 
 
-# Phase 2: Fixing the preprocessing pipeline
-To make it easier for you to fix and follow, I have uploaded my code in `code`, this folder currently has two files, one file named `./test.ipynb` whose content is the code of preprocessing and LDA (using pyspark), you can follow the steps in the `preprocess()` to fix your preprocessing as well as code of LDA to perform yours. The other file is `helper.py`, which is a python program helps me store essential functions. 
+# Phase 2: Fixing the preprocessing pipeline and Training LDA (first phase of training)
+The data folder is changed, here is the structure of the new one
+```
+└── 📁data
+    └── 📁merged
+        └── test.json
+    └── 📁processed
+    └── 📁raw
+        └── test01.json
+        └── test02.json
+```
+To make it easier for you to fix and follow, I have uploaded my code in `code`, this folder currently has two files, one file named `./test.ipynb` whose content is the code of preprocessing and LDA (using pyspark), you can follow the steps in the `preprocess()` to fix your preprocessing as well as code of LDA to perform yours. The other file is `./helper.py`, which is a python program helps me store essential functions. 
 
 As always, let it be my pleasure to help you, but asking is a must so I can know what I can do. 
 
