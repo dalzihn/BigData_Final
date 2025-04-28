@@ -72,7 +72,7 @@ The data folder is changed, here is the structure of the new one
         └── test01.json
         └── test02.json
 ```
-To make it easier for you to fix and follow, I have uploaded my code in `code`, this folder currently has two files, one file named `./test.ipynb` whose content is the code of preprocessing and LDA (using pyspark), you can follow the steps in the `preprocess()` to fix your preprocessing as well as code of LDA to perform yours. The other file is `./helper.py`, which is a python program helps me store essential functions. 
+To make it easier for you to fix and follow, I have uploaded my code in `code`, this folder currently has two files, one file named `./test.ipynb` whose content is the code of preprocessing and LDA (using pyspark), you can follow the steps in the `preprocess()` (I code this function based on Gia Bảo's and Ngọc Diệp's preprocessing code) to fix your preprocessing as well as code of LDA to perform yours. The other file is `./helper.py`, which is a python program helps me store essential functions. 
 
 **WARNING**: You should read documentation about pyspark before coding
 
