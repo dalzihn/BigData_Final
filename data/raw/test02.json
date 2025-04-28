@@ -1,0 +1,1359 @@
+{
+    "paper_id": "0000b6da665726420ab8ac9246d526f2f44d5943",
+    "metadata": {
+        "title": "The cell phone vibration test: A telemedicine substitute for the tuning fork test",
+        "authors": [
+            {
+                "first": "Alex",
+                "middle": [
+                    "Yang"
+                ],
+                "last": "Ba",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Uniformed Services University of the Health Sciences",
+                    "location": {
+                        "settlement": "Bethesda",
+                        "region": "Maryland",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "|",
+                "middle": [],
+                "last": "Robert",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "J",
+                "middle": [],
+                "last": "Lewis",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Walter Reed National Military Medical Center",
+                    "location": {
+                        "settlement": "Bethesda",
+                        "region": "Maryland",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Nora",
+                "middle": [],
+                "last": "Watson",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Walter Reed National Military Medical Center",
+                    "location": {
+                        "settlement": "Bethesda",
+                        "region": "Maryland",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Charles",
+                "middle": [
+                    "A"
+                ],
+                "last": "Riley",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Walter Reed National Military Medical Center",
+                    "location": {
+                        "settlement": "Bethesda",
+                        "region": "Maryland",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Anthony",
+                "middle": [
+                    "M"
+                ],
+                "last": "Tolisano",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Walter Reed National Military Medical Center",
+                    "location": {
+                        "settlement": "Bethesda",
+                        "region": "Maryland",
+                        "country": "USA"
+                    }
+                },
+                "email": "anthony.m.tolisano.mil@mail.mil"
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Objective: An at home-test for differentiating between conductive and sensorineural hearing loss remains elusive. Our goal was to validate the novel cell-phone vibration test (CPVT) against the Weber tuning fork test (WTFT) and to assess if the CPVT can be self-administered by patients reliably.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "Study design: Cross-sectional. Methods: The CPVT involves placement of a vibrating cellphone on the center of the forehead to determine which ear perceives the sound louder. 40 consecutive adult patients with an audiogram within 6 months and no report of recent hearing changes were recruited. Group 1 consisted of 20 patients who were examined by the provider with the CPVT and WTFT using various tuning forks (256, 512, and 1024 Hz). Group 2 consisted of an additional 20 patients who received instructions on selfadministering the CPVT. Kappa statistics were calculated to assess the strength of concordance between the CPVT, WTFT, and audiometric findings for group 1 and between patient self-administered and provider administered CPVT and WTFT for group 2. Results: Concordance between CPVT and WTFT in the entire cohort was substantial (Kappa coefficient: 0.81 for 256 Hz, 0.73 for 512 Hz, and 0.62 for 1024 Hz) with similar concordances between actual and expected results based on audiogram (Kappa coefficient: 0.52 for CPVT and 0.52 for WTFT). Concordance between patient-administered and provider-administered CPVT showed almost perfect agreement (Kappa coefficient: 0.92). Conclusions: The CPVT provides consistent results when compared to a formal WTFT and can be reliably self-administered by patients with appropriate instructions. Level of evidence: 4 K E Y W O R D S hearing loss, telemedicine, tuning fork test",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "As a consequence of the global COVID-19 pandemic, an acceleration in the implementation of telemedicine occurred in order to better triage patients while maintaining medical resources and promoting social distancing. Concurrent improvements in video conferencing technology and the convenience afforded by telemedicine have allowed virtual health practices to persist even after many clinics have begun returning to in-person practice. Nevertheless, a primary disadvantage of telemedicine remains its relative inability to perform a complete physical examination, at least not in the same manner one would in clinic. In particular, an effective otologic exam remains elusive.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "| INTRODUCTION"
+        },
+        {
+            "text": "The ability to rapidly and effectively identify sudden sensorineural hearing loss (SSNHL) is essential. SSNHL-with an incidence in the United States of 5 to 27 per 100 000 people 1 -is one of the few true otologic emergencies requiring expedited evaluation. Current guidelines recommend the initiation of oral or intratympanic steroids within 14 days of symptom onset. 2, 3 Although 32% to 65% of SSNHL cases recover spontaneously, 4 delay in management may lead to residual tinnitus, vertigo, and permanent hearing loss as well as significant negative impacts on quality of life. 2, 5, 6 Audiometry is the gold standard for diagnosing SSNHL; however, this requires appropriately trained staff and equipment which may not be readily available. Thus, the first step in evaluating a patient with suspected SSNHL begins with a history and physical examination to exclude conductive hearing loss (CHL). 2, 3 Tuning fork tests remain a fundamental part of the otologic examination. Lateralization of the Weber turning fork test (WTFT) to the affected ear has historically differentiated CHL from SNHL. 7 Alternatives to the WTFT such as the hum test and the bandage scratch test have been proposed, but neither of these methods have been appropriately validated for general otology patients. The overall clinical data base studying these alternative tests is thin and external validity was limited as they were performed on patients with normal hearing with simulated CHL or solely on postoperative patients. 8, 9 Given the ubiquity of cellphones, utilization of the native vibration function of a mobile phone as a surrogate for a tuning fork is a newer proposed alternative. One study demonstrated the use of smartphone vibration as a replacement to the WTFT on an inpatient ward, but the external validity of this study was limited as it was performed only on patients with a simulated CHL. 10 Another study performed on 60 consecutive patients presenting to the emergency department with unilateral sudden hearing loss found smartphone vibration as an adequate substitute when a provider may not have access to a tuning fork. 11 Further demonstrating the cell phone vibration test's (CPVT) utility for effective and accurate patient self-administration at home would dramatically enhance the telemedicine encounter for patients with SSNHL. Not only would it reduce COVID-19 exposure risk, but it may also assist clinicians in resource scarce settings triage which patients will need expedited, in-person care.",
+            "cite_spans": [
+                {
+                    "start": 369,
+                    "end": 371,
+                    "text": "2,",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 372,
+                    "end": 373,
+                    "text": "3",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 432,
+                    "end": 433,
+                    "text": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 581,
+                    "end": 583,
+                    "text": "2,",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 584,
+                    "end": 586,
+                    "text": "5,",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 587,
+                    "end": 588,
+                    "text": "6",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 899,
+                    "end": 901,
+                    "text": "2,",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 902,
+                    "end": 903,
+                    "text": "3",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 1097,
+                    "end": 1098,
+                    "text": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1504,
+                    "end": 1506,
+                    "text": "8,",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1507,
+                    "end": 1508,
+                    "text": "9",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1889,
+                    "end": 1891,
+                    "text": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 2125,
+                    "end": 2127,
+                    "text": "11",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "ref_spans": [],
+            "section": "| INTRODUCTION"
+        },
+        {
+            "text": "The aim of this study, therefore, is to validate the CPVT as an adequate replacement to the WTFT on actual otology patients. An audiogram was used as the gold standard against which to compare accuracy for both the CPVT and the WTFT. Furthermore, we assessed whether patients could accurately self-administer the CPVT when given appropriate instructions. 15 Otolaryngology practices are at a higher theoretical risk of transmission since a complete evaluation involves the upper aerodigestive tract and aerosol generating procedures such as nasal endoscopy and flexible fiberoptic laryngoscopy are frequently performed in office. 16, 17 Otolaryngologists have continued to embraced telemedicine in accordance with ongoing recommendations made by the American Academy of Otolaryngology. Tele-otolaryngology was already of particular interest to the military, given the need to provide tertiary level care to patients in austere or remote locations. Retrospective studies performed at the Vermont Veteran Affairs Medical Center and Naval",
+            "cite_spans": [
+                {
+                    "start": 355,
+                    "end": 357,
+                    "text": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 630,
+                    "end": 633,
+                    "text": "16,",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 634,
+                    "end": 636,
+                    "text": "17",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "ref_spans": [],
+            "section": "| INTRODUCTION"
+        },
+        {
+            "text": "Medical Center San Diego found up to 62% of otolaryngology encounters would be eligible for telemedicine visits and that 64% of telemedicine patients were able to receive a preliminary diagnosis and plan, respectively. 19, 20 More recent studies found high levels of both patient and provider satisfaction with respect to tele-otolaryngology, though there remains some concern regarding the lack of physical examination. 21 Virtual physical examination maneuvers help address this practice gap, but the most apparent barrier is the ability and confidence of the patient to perform a maneuver on themselves.",
+            "cite_spans": [
+                {
+                    "start": 219,
+                    "end": 222,
+                    "text": "19,",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 223,
+                    "end": 225,
+                    "text": "20",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 421,
+                    "end": 423,
+                    "text": "21",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "ref_spans": [],
+            "section": "| MATERIALS AND METHODS"
+        },
+        {
+            "text": "The CPVT breaks down this major challenge to oto-telemedicine and confers several significant advantages relative to the WTFT for at home use. First, nearly all patients have access to a cellular phone with vibration function. Second, the continuous vibration setting of cell phones is consistent, whereas proper technique is more important when utilizing a tuning fork to avoid the generation of nonfundamental sound frequencies that are produced when the fork is struck incorrectly, a fact that may confound patient interpretation. 22 The primary disadvantage to this, or any at home physical exam maneuver that requires patient cooperation, is that patients must follow instructions correctly. Emphasis on the need to firmly press the smartphone onto the center of the forehead, for example, is impor- Only 19% of patients were prescribed oral steroids by their PCM or the ED, which means a significant number of patients were not adequately treated within the ideal 14-day window recommended by the SSNHL clinical practice guideline. 24 Although it does not replace gold standard audiometry, the CPVT clearly provides clinicians performing virtual health examinations an additional tool to assist in the prompt recognition and diagnosis of SSNHL.",
+            "cite_spans": [
+                {
+                    "start": 534,
+                    "end": 536,
+                    "text": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1038,
+                    "end": 1040,
+                    "text": "24",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "ref_spans": [],
+            "section": "| MATERIALS AND METHODS"
+        },
+        {
+            "text": "The diagnostic accuracy of the CPVT and WTFTs as compared to a formal audiogram appears less than optimal and is somewhat expected given the controversy behind WTFT accuracy. Sensitivity and specificity vary widely amongst a handful of heterogenous studies, and the Weber has been shown to lateralize even with modest hearing asymmetries (2.5-4 dB) lower than our defined 10 dB threshold, which may explain the low accuracy amongst the SNHL patient cohort. 25 ",
+            "cite_spans": [
+                {
+                    "start": 457,
+                    "end": 459,
+                    "text": "25",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "ref_spans": [],
+            "section": "| MATERIALS AND METHODS"
+        },
+        {
+            "text": "The CPVT is a virtual physical exam maneuver similar to a WTFT that can be self-administered by patients to help differentiate CHL and SNHL. The addition of this at home physical exam maneuver to the telemedicine encounter has the capacity to expedite care for those patients most at need for additional testing.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "| CONCLUSIONS"
+        },
+        {
+            "text": "The authors declare no conflict of interest.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "CONFLICT OF INTEREST"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Incidence of sudden sensorineural hearing loss",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Alexander",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Harris",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Otol Neurotol",
+            "volume": "34",
+            "issn": "9",
+            "pages": "1586--1589",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Clinical practice guideline: sudden hearing loss",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Stachler",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Chandrasekhar",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Archer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Otolaryngol Head Neck Surg",
+            "volume": "146",
+            "issn": "3",
+            "pages": "1--35",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Clinical practice guideline: sudden hearing loss (update)",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Chandrasekhar",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Tsai Do",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Schwartz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "",
+            "volume": "161",
+            "issn": "",
+            "pages": "1--45",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Natural history of sudden sensorineural hearing loss",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Mattox",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Simmons",
+                    "suffix": ""
+                }
+            ],
+            "year": 1977,
+            "venue": "Ann Otol Rhinol Laryngol",
+            "volume": "86",
+            "issn": "4",
+            "pages": "463--480",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Quality of life, psychosocial consequences, and audiological rehabilitation after sudden sensorineural hearing loss",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Carlsson",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hall",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Lind",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Danermark",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Int J Audiol",
+            "volume": "50",
+            "issn": "2",
+            "pages": "139--144",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "An investigation of the audiologic handicap associated with unilateral sudden sensorineural hearing loss",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Chiossoine-Kerdel",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Baguley",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Stoddart",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Moffat",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Am J Otol",
+            "volume": "21",
+            "issn": "5",
+            "pages": "645--651",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Early history of tuning-fork tests",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ng",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Jackler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Am J Otol",
+            "volume": "14",
+            "issn": "1",
+            "pages": "100--105",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Validity of the hum test, a simple and reliable alternative to the weber test",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Ahmed",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Gallant",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Ruiz",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Shapiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Voigt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Ann Otol Rhinol Laryngol",
+            "volume": "127",
+            "issn": "6",
+            "pages": "402--405",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "How reliable is the \"scratch test\" versus the weber test after tympanomastoid surgery?",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Iacovidou",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Giblett",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Doshi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Jindal",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Otol Neurotol",
+            "volume": "35",
+            "issn": "5",
+            "pages": "762--763",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Can smartphone vibration provide a valid alternative to tuning forks for use on the ENT ward round?",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Hopkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Owens",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "J Laryngol Otol",
+            "volume": "133",
+            "issn": "3",
+            "pages": "245--247",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "A smartphone-based weber test may discriminate between a conductive and a sensorineural hearing loss",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Ungar",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Handzel",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Cavel",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Oron",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Audiol Neurootol",
+            "volume": "24",
+            "issn": "4",
+            "pages": "191--196",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "The measurement of observer agreement for categorical data",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Landis",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Koch",
+                    "suffix": ""
+                }
+            ],
+            "year": 1977,
+            "venue": "Biometrics",
+            "volume": "33",
+            "issn": "1",
+            "pages": "159--174",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "New and revised reporting guidelines from the committee on hearing and equilibrium. American Academy of Otolaryngology-Head and Neck Surgery Foundation",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Monsell",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Inc. Otolaryngol Head Neck Surg",
+            "volume": "113",
+            "issn": "3",
+            "pages": "176--178",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Can an average of thresholds at 2 kHz and 4 kHz substitute for the threshold at 3 kHz in pure tone audiometry? A study based on the Korean National Health and nutrition examination survey",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Byun",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Shin",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Chun",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLoS One",
+            "volume": "13",
+            "issn": "8",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Outbreak of SARS-CoV-2 infections, including COVID-19 vaccine breakthrough infections",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Vostok",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2021,
+            "venue": "MMWR Morb Mortal Wkly Rep",
+            "volume": "70",
+            "issn": "31",
+            "pages": "1059--1062",
+            "other_ids": {
+                "DOI": [
+                    "10.15585/mmwr.mm7031e2"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "SARS-CoV-2 viral load in upper respiratory specimens of infected patients",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zou",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ruan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "N Engl J Med",
+            "volume": "382",
+            "issn": "12",
+            "pages": "1177--1179",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Aerosol and surface stability of SARS-CoV-2 as compared with SARS-CoV-1",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Van Doremalen",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Bushmaker",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Morris",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "N Engl J Med",
+            "volume": "382",
+            "issn": "16",
+            "pages": "1564--1567",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Guidance for return to practice for otolaryngology: head and neck surgery",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Setzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Anne",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Where does telemedicine fit into otolaryngology? An assessment of telemedicine eligibility among otolaryngology diagnoses",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Mccool",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Davies",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Otolaryngol Head Neck Surg",
+            "volume": "158",
+            "issn": "4",
+            "pages": "641--644",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Teleotolaryngology: a retrospective review at a military tertiary treatment facility",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Haegen",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Cupp",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Hunsaker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Otolaryngol Head Neck Surg",
+            "volume": "130",
+            "issn": "5",
+            "pages": "511--518",
+            "other_ids": {}
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "Patient and provider satisfaction with telemedicine in otolaryngology",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Fischer",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Nagy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2021,
+            "venue": "OTO Open",
+            "volume": "5",
+            "issn": "1",
+            "pages": "2473974--20981838",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "The otologist's tuning fork examination: are you striking it correctly? Otolaryngol Head Neck Surg",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Stevens",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Pfannenstiel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "",
+            "volume": "152",
+            "issn": "",
+            "pages": "477--479",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "Can you hear me now? The impact of hearing loss on patient health literacy",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Tolisano",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Isaacson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Kutz",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Hunter",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Otol Neurotol",
+            "volume": "41",
+            "issn": "8",
+            "pages": "1027--1032",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "Sudden sensorineural hearing loss in the Department of Defense",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Hughes",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Fischer",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Esquivel",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Laury",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Otolaryngol Head Neck Surg",
+            "volume": "159",
+            "issn": "2",
+            "pages": "354--358",
+            "other_ids": {}
+        },
+        "BIBREF24": {
+            "ref_id": "b24",
+            "title": "Diagnostic accuracy of tuning fork tests for hearing loss: a systematic review",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Kelly",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Adams",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Otolaryngol Head Neck Surg",
+            "volume": "159",
+            "issn": "2",
+            "pages": "220--230",
+            "other_ids": {
+                "DOI": [
+                    "10.1177/0194599818770405"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "ref_id": "b25",
+            "title": "Tuning fork testing in sudden sensorineural hearing loss",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Shuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Halpin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Rauch",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Telian",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "JAMA Intern Med",
+            "volume": "173",
+            "issn": "8",
+            "pages": "706--707",
+            "other_ids": {}
+        },
+        "BIBREF26": {
+            "ref_id": "b26",
+            "title": "Validation of a smartphone-based Rinne test to detect an air-bone gap",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Hibscher",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Oron",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Handzel",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Warshavsky",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Horowitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Ungar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2021,
+            "venue": "Eur Arch Otorhinolaryngol",
+            "volume": "16",
+            "issn": "",
+            "pages": "1--7",
+            "other_ids": {}
+        },
+        "BIBREF27": {
+            "ref_id": "b27",
+            "title": "The cell phone vibration test: A telemedicine substitute for the tuning fork test",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Lewis",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Watson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Tolisano",
+                    "suffix": ""
+                }
+            ],
+            "year": 2021,
+            "venue": "Laryngoscope Investigative Otolaryngology",
+            "volume": "6",
+            "issn": "5",
+            "pages": "1175--1181",
+            "other_ids": {
+                "DOI": [
+                    "info:doi/10.1002/lio2.665"
+                ]
+            }
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Institutional review board approval was obtained through the Walter Reed National Military Medical Center Department of Research Programs (WRNMMC-EDO-2020-0553). After informed consent was given prior to participation, 40 consecutive adult patients presenting to a tertiary care otology practice were assessed. Inclusion criteria required that patients had a pre-existing comprehensive pure-tone audiogram performed within the past 6 months and no reported subjective changes in hearing. Patient demographics and ICD-10 coded diagnosis were recorded. Patients who were under the age of 18, had pre-existing implant devices, or had a recent subjective change in hearing of either ear within the past 6 months were excluded. The CPVT consists of using a standard smart phone without a phone case and placing it on a continuous vibration setting. A corner of the vibrating smartphone is placed firmly on the anterior midline forehead (Figure 1A). The patient is then asked in which ear the vibration is heard loudest (or if it is equal on both sides), and the vibration is continuously replayed until the patient feels confident in their F I G U R E 1 (A) Cell phone vibration test and (B) traditional Weber tuning fork testtuning forks. The results of the CPVT were compared to the formal WTFT. Group 2 consisted of the subsequent 20 patients. These individuals were provided verbal instructions and a visual handout on how to self-administer the CPVT (Figure 2). After patients F I G U R E 2 Visual handout for instructions on self-administering the cell phone vibration test",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "tant. The ability to properly follow directions is especially important in patients with hearing loss who have previously been demonstrated to have decreased health literacy relative to typical hearing individuals.23 Having a validated virtual exam maneuver for the differentiation of CHL and SNHL has significant diagnostic utility in the telemedicine management of SSNHL. Even in normal in-person clinical settings, there is a considerable amount of variability and delay in workup. A Department of Defense study on SSNHL found that 75% of patients presented to their primary care manager (PCM) or the emergency department (ED) within 5 days of symptom onset, yet they were not seen by an otolaryngologist until an average of 15 days post-onset.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Limitations to this study include small sample size, non-randomized study design, and being performed at a single institution with a primarily active-duty military and military retiree patient population. Because some of the cohort were follow up patients, some individuals likely were aware of their diagnosis, a fact that may have biased their interpretation of the CPVT and WTFT. Additionally, the CPVT seemed to share the highest overall agreement with the 256 Hz tuning fork rather than the more commonly used 512 Hz tuning fork in the present study. This may be a logical finding given the cell phone's fundamental frequency to be measured at 148.9 Hz using Praat Software (version 6.1.42), a free computer program that analyzes phonetics, but results could vary with utilization of different cell phone types as the fundamental frequency of various vibrations were not assessed. Other studies, however, have measured a similar frequency in different makes and models of cell phones, indicating that the frequency of vibration is relatively consistent across samples.11,27 Future directions of our work include blinding provider and subject to the audiogram or audiometric diagnosis, inclusion of more patients with SNHL, and studying the CPVT in a true telemedicine environment.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "T A B L E 1 Interpretation of Cohen's kappa (fromLandis and Koch 12 )    hearing loss complaints, including BPPV and unspecified right ear otalgia. Additionally, eight patients were long-term post-operative patients including both external and middle ear surgeries. Kappa statistics indicated substantial agreement between provider CPVT and across all WTFT frequencies; Kappa values are displayed inTable 3. Compared in the combined cohort. We were also interested in calculating the diagnostic accuracy of the CPVT among the subgroup of patients who were expected to lateralize, since patients who present with SSNHL would presumably lateralize based off the audiometric diagnostic criterion in hearing loss of \u226530 dB affecting at least three consecutive",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Nevertheless, we believe that the CPVT and WTFTs become a more reliable predictor of the audiogram in SSNHL patients as they are much more likely to present with significantly abnormal hearing examinations, comparable to other studies that have also measured WTFT accuracy in SNHL.11,26 The relatively high accuracy amongst the CHL patient cohort also supports that these bedside hearing tests help exclude CHL from the standard initial workup of SSNHL. Again, the CPVT is not meant to replace the audiogram, but rather serve to expedite care in the telemedicine setting where tuning forks are often unavailable. Patients for whom SSNHL is suspected using the CPVT should undergo formal comprehensive audiometry and, if confirmed, appropriate imaging to rule out retrocochlear lesions.",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}
