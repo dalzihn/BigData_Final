@@ -74,5 +74,7 @@ The data folder is changed, here is the structure of the new one
 ```
 To make it easier for you to fix and follow, I have uploaded my code in `code`, this folder currently has two files, one file named `./test.ipynb` whose content is the code of preprocessing and LDA (using pyspark), you can follow the steps in the `preprocess()` to fix your preprocessing as well as code of LDA to perform yours. The other file is `./helper.py`, which is a python program helps me store essential functions. 
 
+WARNING: You should read documentation about pyspark before coding
+
 As always, let it be my pleasure to help you, but asking is a must so I can know what I can do. 
 
