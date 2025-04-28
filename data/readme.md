@@ -1,5 +1,4 @@
-# Buidling preprocessing pipeline
----
+# Phase 1: Buidling preprocessing pipeline
 Given the input file is "test.json", you will have to define a function that takes as input a collection of text and returns its vector representation.
 
 For example,
@@ -56,8 +55,14 @@ Remember, after all the elements of the function is filled, you will have to tes
 
 Hope with this instruction can help you to learn and code. 
 
-# Notes
+## Notes
 
 - Feel free to ask the leader if you get into any problems.
 - The pipeline depicted in the picture belongs to Gia Bảo, it is his work of effort, __DO NOT__ share without his permission.
 - Do not put all the works until the final day of deadline, it is too dangerous as the preprocessing is one of the most important stage. 
+
+# Phase 2: Fixing the preprocessing pipeline
+To make it easier for you to fix and follow, I have uploaded my code in `code`, this folder currently has two files, one file named `./test.ipynb` whose content is the code of preprocessing and LDA (using pyspark). The other file is `helper.py`, which is a python program helps me store essential functions. 
+
+As always, let it be my pleasure to help you, but asking is a must so I can know what I can do. 
+
