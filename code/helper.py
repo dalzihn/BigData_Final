@@ -10,6 +10,13 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+import sparknlp
+import pyspark
+from sparknlp.base import *
+from sparknlp.annotator import *
+from pyspark.ml.feature import CountVectorizer
+from pyspark.ml.feature import IDF
+from pyspark.ml.clustering import LDA
 
 def merge_files() -> None:
     """Merge all JSON files of a folder
@@ -88,3 +95,83 @@ def preprocess(data: pd.DataFrame) -> pd.DataFrame:
     # Convert to DataFrame
     tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
     return data, tfidf
+
+def preprocess_sparknlp(
+        data: pd.DataFrame,
+        sparknlp_session: pyspark.sql.session.SparkSession
+) -> pyspark.sql.dataframe.DataFrame:
+    """Performs the preprocessing using SparkNLP
+    
+    Args:
+        data: input file as pandas.DataFrame
+        sparknlp_session: a SparkSession
+    Returns:
+        A pyspark.sql.dataframe.DataFrame which has vector form of the input
+    """
+    # Change from pandas.DataFrame to Spark DataFrame
+    sparknlp_df = sparknlp_session.createDataFrame(data)
+    
+    # Document Assembler: Converts input text into a suitable format for NLP processing
+    documentAssembler = DocumentAssembler()\
+        .setInputCol("text")\
+        .setOutputCol("document")\
+        .setCleanupMode("shrink")
+
+    # Sentence tokenisation
+    sentenceDetector = SentenceDetector()\
+        .setInputCols(['document'])\
+        .setOutputCol('sentences')
+
+    # Word tokenisation 
+    tokeniser = Tokenizer()\
+        .setInputCols(["sentences"]) \
+        .setOutputCol("token")
+    
+    # Text cleaning and Normalisation
+    normaliser = Normalizer()\
+        .setInputCols("token")\
+        .setOutputCol("normalised")\
+        .setLowercase(True)\
+        .setCleanupPatterns(["[^a-zA-Z\s]"])
+
+    # Stopword Removal
+    stopwords_cleaner = StopWordsCleaner()\
+        .setInputCols("normalised")\
+        .setOutputCol("stopwords_removed")\
+        .setCaseSensitive(False)
+
+    # Lemmatisation
+    lemmatizer = LemmatizerModel.pretrained()\
+        .setInputCols(["stopwords_removed"])\
+        .setOutputCol("lemma")
+    
+    # Finisher 
+    finisher = Finisher() \
+        .setInputCols("lemma") \
+        .setOutputCols("finish") \
+        .setIncludeMetadata(False) # set to False to remove metadata
+    
+    # Pipeline
+    pipeline = Pipeline().setStages([
+            documentAssembler,
+            sentenceDetector,
+            tokeniser,
+            normaliser,
+            stopwords_cleaner,
+            lemmatizer,
+            finisher
+            ])
+    result = pipeline.fit(sparknlp_df).transform(sparknlp_df)    
+    
+    # Word Embeddings (turns into vector)
+    ## Term-Frequency (TF) transform
+    tfizer = CountVectorizer(inputCol='finish', outputCol='tf_features')
+    tf_model = tfizer.fit(result)
+    tf_result = tf_model.transform(result)
+    
+    ## TF-IDF trasnform
+    idfizer = IDF(inputCol='tf_features', outputCol='tf_idf_features')
+    idf_model = idfizer.fit(tf_result)
+    tfidf_result = idf_model.transform(tf_result)
+
+    return result, tfidf_result
