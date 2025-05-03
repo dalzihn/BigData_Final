@@ -76,9 +76,9 @@ def preprocess(data: pd.DataFrame) -> pd.DataFrame:
     data['sent_tokens'] = data['text'].apply(sent_tokenize)
     
     # Text cleaning
-    data['sent_tokens'] = data['sent_tokens'].apply(lambda sentences: [re.sub(r"[^a-zA-Z\s]", "", sent) for sent in sentences])
+    data['sent_tokens'] = data['sent_tokens'].apply(lambda sentences: [re.sub(r"[^a-zA-Z\s]", " ", sent).strip() for sent in sentences])
     
-    # # Normalisation
+    # Normalisation
     data['sent_tokens'] = data['sent_tokens'].apply(lambda sentences: [sent.lower() for sent in sentences])
 
     #Word tokenisation
@@ -96,21 +96,20 @@ def preprocess(data: pd.DataFrame) -> pd.DataFrame:
     tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
     return data, tfidf
 
-def preprocess_sparknlp(
-        data: pd.DataFrame,
-        sparknlp_session: pyspark.sql.session.SparkSession
-) -> pyspark.sql.dataframe.DataFrame:
-    """Performs the preprocessing using SparkNLP
-    
+def pipeline_model(
+        train_data: pd.DataFrame,
+        spark_session: pyspark.sql.session.SparkSession
+) -> pyspark.ml.pipeline.PipelineModel:
+    """Trains a Pipeline model used to be applied for preprocessing phase
+
     Args:
-        data: input file as pandas.DataFrame
-        sparknlp_session: a SparkSession
+        train_data: data as pandas.DataFrame
+        spark_session: a SparkSession
     Returns:
-        A pyspark.sql.dataframe.DataFrame which has vector form of the input
+        A trained PipelineModel
     """
-    # Change from pandas.DataFrame to Spark DataFrame
-    sparknlp_df = sparknlp_session.createDataFrame(data)
     
+    sparknlp_df = spark_session.createDataFrame(train_data)
     # Document Assembler: Converts input text into a suitable format for NLP processing
     documentAssembler = DocumentAssembler()\
         .setInputCol("text")\
@@ -126,7 +125,7 @@ def preprocess_sparknlp(
     tokeniser = Tokenizer()\
         .setInputCols(["sentences"]) \
         .setOutputCol("token")
-    
+
     # Text cleaning and Normalisation
     normaliser = Normalizer()\
         .setInputCols("token")\
@@ -144,13 +143,13 @@ def preprocess_sparknlp(
     lemmatizer = LemmatizerModel.pretrained()\
         .setInputCols(["stopwords_removed"])\
         .setOutputCol("lemma")
-    
+
     # Finisher 
     finisher = Finisher() \
         .setInputCols("lemma") \
         .setOutputCols("finish") \
         .setIncludeMetadata(False) # set to False to remove metadata
-    
+
     # Pipeline
     pipeline = Pipeline().setStages([
             documentAssembler,
@@ -161,7 +160,26 @@ def preprocess_sparknlp(
             lemmatizer,
             finisher
             ])
-    result = pipeline.fit(sparknlp_df).transform(sparknlp_df)    
+    result = pipeline.fit(sparknlp_df)
+    return result
+
+def preprocess_sparknlp(
+        data: pd.DataFrame,
+        spark_session: pyspark.sql.session.SparkSession,
+        pipeline_model: pyspark.ml.pipeline.PipelineModel
+) -> pyspark.sql.dataframe.DataFrame:
+    """Performs the preprocessing using a trained PipelineModel
+    
+    Args:
+        data: input file as pandas.DataFrame
+        sparknlp_session: a SparkSession
+        pipeline_model: an instance of pyspark.ml.pipeline.PipelineModel to perform preprocessing
+    Returns:
+        A pyspark.sql.dataframe.DataFrame which has vector form of the input
+    """
+    # Change from pandas.DataFrame to Spark DataFrame
+    sparknlp_df = spark_session.createDataFrame(data)
+    result = pipeline_model.transform(sparknlp_df)    
     
     # Word Embeddings (turns into vector)
     ## Term-Frequency (TF) transform
@@ -174,4 +192,4 @@ def preprocess_sparknlp(
     idf_model = idfizer.fit(tf_result)
     tfidf_result = idf_model.transform(tf_result)
 
-    return result, tfidf_result
+    return tfidf_result
