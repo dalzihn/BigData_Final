@@ -8,7 +8,7 @@ This means, takes "data" whose type is pandas.DataFrame as input and returns a p
 
 To make it easy for you to get along with, you should follow this pipeline built by Gia Bảo. 
 
-![Preprocessing Pipeline](../.img/pipe.png)
+![Preprocessing Pipeline](../img/pipe.png)
 
 ---
 
@@ -43,13 +43,13 @@ def preprocess(data: pandas.DataFrame) -> pandas.DataFrame:
 
 Here, "# Read data" or "# Text cleaning" or "# Normalisation" are the smaller steps of the function. You can code these steps outside the functions and test them, when testing phase is done you can put it into the function. 
 
-![Preprocessing Pipeline](../.img/illustration.png)
+![Preprocessing Pipeline](../img/illustration.png)
 
 At illustrated in the image above, I code the step "Read Data" and test it, after ensuring that it performs well by printing the result, I put it into the function.
 
 For further visualisation, the output should look like this, where column consists of words, row consists of documents and the entries are tf-idf values. 
 
-![Output example](../.img/tfidf_illustration.jpg)
+![Output example](../img/tfidf_illustration.jpg)
 
 Remember, after all the elements of the function is filled, you will have to test the function as a whole. 
 
