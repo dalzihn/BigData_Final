@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import nltk
 import re
+import pyspark.mllib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import word_tokenize, sent_tokenize
 nltk.download('punkt_tab')
@@ -106,7 +107,7 @@ def pipeline_model(
         train_data: data as pandas.DataFrame
         spark_session: a SparkSession
     Returns:
-        A trained PipelineModel
+        A PipelineModel and A 
     """
     
     sparknlp_df = spark_session.createDataFrame(train_data)
@@ -160,28 +161,11 @@ def pipeline_model(
             lemmatizer,
             finisher
             ])
-    result = pipeline.fit(sparknlp_df)
-    return result
+    pipeline_model = pipeline.fit(sparknlp_df)
+    result = pipeline_model.transform(sparknlp_df)
+    result.cache()
 
-def preprocess_sparknlp(
-        data: pd.DataFrame,
-        spark_session: pyspark.sql.session.SparkSession,
-        pipeline_model: pyspark.ml.pipeline.PipelineModel
-) -> pyspark.sql.dataframe.DataFrame:
-    """Performs the preprocessing using a trained PipelineModel
-    
-    Args:
-        data: input file as pandas.DataFrame
-        sparknlp_session: a SparkSession
-        pipeline_model: an instance of pyspark.ml.pipeline.PipelineModel to perform preprocessing
-    Returns:
-        A pyspark.sql.dataframe.DataFrame which has vector form of the input
-    """
-    # Change from pandas.DataFrame to Spark DataFrame
-    sparknlp_df = spark_session.createDataFrame(data)
-    result = pipeline_model.transform(sparknlp_df)    
-    
-    # Word Embeddings (turns into vector)
+     # Word Embeddings (turns into vector)
     ## Term-Frequency (TF) transform
     tfizer = CountVectorizer(inputCol='finish', outputCol='tf_features')
     tf_model = tfizer.fit(result)
@@ -190,6 +174,38 @@ def preprocess_sparknlp(
     ## TF-IDF trasnform
     idfizer = IDF(inputCol='tf_features', outputCol='tf_idf_features')
     idf_model = idfizer.fit(tf_result)
-    tfidf_result = idf_model.transform(tf_result)
 
-    return tfidf_result
+    return pipeline_model, tf_model, idf_model
+
+def preprocess_sparknlp(
+        data: pd.DataFrame,
+        spark_session: pyspark.sql.session.SparkSession,
+        tfidf_model: tuple[pyspark.ml.feature.CountVectorizer, pyspark.ml.feature.IDFModel],
+        pipeline_model: pyspark.ml.pipeline.PipelineModel
+) -> pyspark.sql.dataframe.DataFrame:
+    """Performs the preprocessing using a trained PipelineModel
+    
+    Args:
+        data: input file as pandas.DataFrame
+        sparknlp_session: a SparkSession
+        tfidf_model: a tuple which as two model, one is for TF transforming, the other one is IDF transforming
+        pipeline_model: an instance of pyspark.ml.pipeline.PipelineModel to perform preprocessing
+    Returns:
+        A pyspark.sql.dataframe.DataFrame which has vector form of the input
+    """
+    # Change from pandas.DataFrame to Spark DataFrame
+    sparknlp_df = spark_session.createDataFrame(data)
+
+    # Get TF-IDF model
+    tf_model, idf_model = tfidf_model[0], tfidf_model[1]
+
+    # Preprocess
+    preprocessed = pipeline_model.transform(sparknlp_df)    
+
+    # TF transformation
+    tf = tf_model.transform(preprocessed)
+
+    # TF-IDF transformation
+    tfidf = idf_model.transform(tf)
+
+    return tfidf
