@@ -62,7 +62,7 @@ def custom_word_tokenize(sent_tokens: list[str]) -> list[str]:
         word_tokens.extend(tokens)
     return word_tokens
 
-def preprocess(data: pd.DataFrame) -> pd.DataFrame:
+def preprocess_nltk(data: pd.DataFrame) -> pd.DataFrame:
     """Performs the preprocessing
     
     Args:
@@ -90,11 +90,14 @@ def preprocess(data: pd.DataFrame) -> pd.DataFrame:
 
     # Word Embeddings (turns into vector)
     data['to_tfidf'] = data['word_tokens'].apply(lambda tokens: ' '.join(tokens))
-    vectorizer = TfidfVectorizer(min_df=0.3, max_df=0.85, stop_words=stop_words)
+    vectorizer = TfidfVectorizer(min_df=0.3, 
+                                 max_df=0.85, 
+                                 stop_words=stop_words)
     tfidf_matrix = vectorizer.fit_transform(data['to_tfidf'])
     
     # Convert to DataFrame
-    tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())
+    tfidf = pd.DataFrame(tfidf_matrix.toarray(), 
+                         columns=vectorizer.get_feature_names_out())
     return data, tfidf
 
 def pipeline_model(
@@ -167,7 +170,10 @@ def pipeline_model(
 
      # Word Embeddings (turns into vector)
     ## Term-Frequency (TF) transform
-    tfizer = CountVectorizer(inputCol='finish', outputCol='tf_features')
+    tfizer = CountVectorizer(inputCol='finish', 
+                             outputCol='tf_features',
+                             minDF=0.3,
+                             maxDF=0.85)
     tf_model = tfizer.fit(result)
     tf_result = tf_model.transform(result)
     
