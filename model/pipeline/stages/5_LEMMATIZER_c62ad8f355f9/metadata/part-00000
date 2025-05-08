@@ -1,0 +1,1 @@
+{"class":"com.johnsnowlabs.nlp.annotators.LemmatizerModel","timestamp":1746373138243,"sparkVersion":"3.5.5","uid":"LEMMATIZER_c62ad8f355f9","paramMap":{"outputCol":"lemma","inputCols":["stopwords_removed"]},"defaultParamMap":{"lazyAnnotator":false}}
