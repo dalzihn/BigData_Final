@@ -14,9 +14,30 @@ This repo represents the final project of group 09 for the course *Big Data and 
 
 
 ## Repo overview
+The folder structure of this repo is as follows:
+```
+└── 📁code
+    └── evaluation.ipynb
+    └── helper.py
+    └── metrics.py
+└── 📁data
+    └── 📁merged
+    └── 📁processed
+└── 📁img
+└── 📁model
+```
+
+The repo is divided into four folders, the `code/` folder contains the python code for the project. In detail, `evaluation.ipynb` is the notebook used to perform evaluation and discover latent topics, while `helper.py` contains essential functions for preprocessing and training preprocessing models, and `metrics.py` stores code for calculating metrics such as PUW.
+
+The `data/` folder consists of two subfolders, `merged` and `processed`, `merged` contains 10000 papers extracted from [CORD-19](https://www.kaggle.com/datasets/allen-institute-for-ai/CORD-19-research-challenge) divided into three .json files, while `proceessed` is the TF-IDF feature of 10000 papers
 
 ## Getting started
+
 
 ## Results
 
 ## Deployment
+
+## Contributing
+
+## Acknowledgements
