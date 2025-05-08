@@ -4,7 +4,7 @@ Big Data and Applications
 </strong></h2>
 
 <p align="center">
-  <img src="./img/UEH-Tech School.png" width="1500">
+  <img src="./img/UEH-Tech School.png" width="500">
 </p>
 
 
