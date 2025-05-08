@@ -46,9 +46,11 @@ The `model/` folder archives four models used in this project,
 These instructions will help you set up this project on local machine for scientific purposes and further developments
 
 **Prerequisites**
+
 This project utilises SparkNLP to process text data, but it only supports python version up to 3.10.x so your python version should be set to 3.10.x.
 
 **Installing**
+
 A `requirements.txt` is included to specify the necessary packages for running this project, using
 
 `pip install -r requirements.txt`
