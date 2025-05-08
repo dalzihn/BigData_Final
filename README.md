@@ -64,7 +64,7 @@ The performance of Spark is evaluated on execution time and throughput based on 
 ![Throughput, Scikit-learn and PySpark](./img/sklearn_pyspark_throughput.png)
 
 ## Deployment 
-Feel free to download the model in `model\`, test on your own data and fine-tune it for better applications as the models are not fine-tuned yet.
+Feel free to download the model in `model\`, test on your own data and fine-tune it for various applications.
 
 ## Contributing
 Special thanks to our collaborators for their support in this project
