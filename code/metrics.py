@@ -36,7 +36,7 @@ def puw(
 
         puw = len(unique_terms) / len(term_indices)
 
-        topics_to_puw[topic_id] = puw
+        topics_to_puw[str(topic_id)] = puw
 
     return topics_to_puw
 
