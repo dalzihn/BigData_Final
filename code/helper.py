@@ -19,6 +19,8 @@ from pyspark.ml.feature import CountVectorizer
 from pyspark.ml.feature import IDF
 from pyspark.ml.clustering import LDA
 
+stop_words = stopwords.words("english") + ["p", "n", "e", "d", "c", "b", "h", "r", "ie", "eg", "we", "fig"]
+
 def merge_files() -> None:
     """Merge all JSON files of a folder
 
@@ -100,6 +102,7 @@ def preprocess_nltk(data: pd.DataFrame) -> pd.DataFrame:
                          columns=vectorizer.get_feature_names_out())
     return data, tfidf
 
+
 def pipeline_model(
         train_data: pd.DataFrame,
         spark_session: pyspark.sql.session.SparkSession
@@ -112,7 +115,7 @@ def pipeline_model(
     Returns:
         A PipelineModel and A 
     """
-    
+    # Clean text before creating DataFrame
     sparknlp_df = spark_session.createDataFrame(train_data)
     # Document Assembler: Converts input text into a suitable format for NLP processing
     documentAssembler = DocumentAssembler()\
@@ -128,7 +131,7 @@ def pipeline_model(
     # Word tokenisation 
     tokeniser = Tokenizer()\
         .setInputCols(["sentences"]) \
-        .setOutputCol("token")
+        .setOutputCol("token") \
 
     # Text cleaning and Normalisation
     normaliser = Normalizer()\
@@ -141,7 +144,8 @@ def pipeline_model(
     stopwords_cleaner = StopWordsCleaner()\
         .setInputCols("normalised")\
         .setOutputCol("stopwords_removed")\
-        .setCaseSensitive(False)
+        .setCaseSensitive(False)\
+        .setStopWords(stop_words)
 
     # Lemmatisation
     lemmatizer = LemmatizerModel.pretrained()\
