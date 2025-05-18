@@ -46,9 +46,11 @@ The `model/` folder archives four models used in this project,
 These instructions will help you set up this project on local machine for scientific purposes and further developments
 
 **Prerequisites**
+
 This project utilises SparkNLP to process text data, but it only supports python version up to 3.10.x so your python version should be set to 3.10.x.
 
 **Installing**
+
 A `requirements.txt` is included to specify the necessary packages for running this project, using
 
 `pip install -r requirements.txt`
@@ -62,7 +64,7 @@ The performance of Spark is evaluated on execution time and throughput based on 
 ![Throughput, Scikit-learn and PySpark](./img/sklearn_pyspark_throughput.png)
 
 ## Deployment 
-Feel free to download the model in `model\`, test on your own data and fine-tune it for better applications as the models are not fine-tuned yet.
+Feel free to download the model in `model\`, test on your own data and fine-tune it for various applications.
 
 ## Contributing
 Special thanks to our collaborators for their support in this project
